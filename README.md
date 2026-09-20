@@ -1,50 +1,38 @@
 # Text-to-SQL Agent
 
-基于 LangChain + LangGraph + DeepSeek 的智能数据库查询助手。
+基于 **LangChain + LangGraph + DeepSeek** 的智能数据库查询助手。通过自然语言对话即可完成对 MySQL 数据库的增删改查、复杂聚合查询，并内置多层安全防护与可视化前端。
+
+---
 
 ## ✨ 功能特性
-- 🗣️ 自然语言查询 MySQL 数据库
-- 🔧 支持 CRUD、复杂 SQL 查询
-- 🛡️ 三层安全防护（参数化 + 标识符校验 + 权限隔离）
-- 🔄 LangGraph Agent 架构，支持多轮对话
-- 📊 提供 React 前端界面
+
+- 🗣️ **自然语言交互** — 用日常语言描述需求，Agent 自动生成并执行 SQL
+- 🔧 **完整的 CRUD 能力** — 支持 `SELECT`、`INSERT`、`UPDATE`、`DELETE`
+- 📊 **复杂查询支持** — 支持 `JOIN`、`GROUP BY`、聚合、子查询等
+- 🛡️ **三层安全防护**
+  - 应用层：参数化查询 + 标识符白名单校验 + 强制 `LIMIT`
+  - 数据库层：表级权限隔离（Agent 只能操作授权表）
+  - 审计层：结构化日志记录每一次 SQL 调用
+- 🔄 **LangGraph Agent 架构** — 支持多轮对话、工具调用、状态管理
+- 📈 **可观测性** — 集成 LangSmith，全链路追踪 Token 消耗与响应延迟
+- 🖥️ **可视化前端** — 提供基于 React 的聊天界面（可选）
+
+---
 
 ## 🛠️ 技术栈
-Python | LangChain | LangGraph | DeepSeek | MySQL | FastAPI | React
 
-## 🚀 快速开始
+| 分类 | 技术 |
+|------|------|
+| **语言** | Python 3.11+ |
+| **Agent 框架** | LangChain 1.0+ / LangGraph 1.0+ |
+| **大语言模型** | DeepSeek（兼容 OpenAI 接口） |
+| **数据库** | MySQL 8.0+ |
+| **数据库驱动** | PyMySQL |
+| **配置管理** | Pydantic Settings + python-dotenv |
+| **日志** | Python logging + RotatingFileHandler |
+| **前端** | React（可选） |
+| **部署** | Docker / Docker Compose |
 
-1. 克隆项目
-   \`\`\`bash
-   git clone https://github.com/your-username/text2sql-agent.git
-   cd text2sql-agent
-   \`\`\`
-
-2. 配置环境变量
-   \`\`\`bash
-   cp backend/.env.example backend/.env
-   # 编辑 .env，填入你的密码和 API Key
-   \`\`\`
-
-3. 安装依赖
-   \`\`\`bash
-   pip install -r backend/requirements.txt
-   \`\`\`
-
-4. 启动服务
-   \`\`\`bash
-   cd backend
-   langgraph dev
-   \`\`\`
+---
 
 ## 📁 项目结构
-\`\`\`
-├── backend/         # LangGraph 后端
-│   ├── agent/       # Agent 核心逻辑
-│   └── .env.example # 配置模板
-├── scripts/         # 工具脚本
-└── SQL_Scripts/     # 数据库初始化
-\`\`\`
-
-## 📝 License
-MIT
