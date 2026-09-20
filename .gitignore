@@ -10,7 +10,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 
-# ===== 环境变量（绝不提交！）=====
+# ===== 环境变量 =====
 .env
 .env.local
 backend/.env
@@ -34,11 +34,6 @@ MySQLDataBaseMange.log
 mysql_data/
 SQL_Scripts/
 
-# ===== Node（前端）=====
-node_modules/
-.next/
-dist/
-build/
 
 # ===== 系统文件 =====
 .DS_Store
