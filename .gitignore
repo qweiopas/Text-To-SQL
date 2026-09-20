@@ -1,0 +1,48 @@
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# ===== 环境变量（绝不提交！）=====
+.env
+.env.local
+backend/.env
+
+# ===== 日志 =====
+*.log
+logs/
+MySQLDataBaseMange.log
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+
+# ===== LangGraph =====
+.langgraph_api/
+
+# ===== 数据库文件 =====
+*.db
+*.sqlite
+mysql_data/
+SQL_Scripts/
+
+# ===== Node（前端）=====
+node_modules/
+.next/
+dist/
+build/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+
+# scripts
+scripts/
