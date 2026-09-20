@@ -15,7 +15,7 @@
   - 审计层：结构化日志记录每一次 SQL 调用
 - 🔄 **LangGraph Agent 架构** — 支持多轮对话、工具调用、状态管理
 - 📈 **可观测性** — 集成 LangSmith，全链路追踪 Token 消耗与响应延迟
-- 🖥️ **可视化前端** — 提供基于 React 的聊天界面（可选）
+
 
 ---
 
@@ -29,10 +29,4 @@
 | **数据库** | MySQL 8.0+ |
 | **数据库驱动** | PyMySQL |
 | **配置管理** | Pydantic Settings + python-dotenv |
-| **日志** | Python logging + RotatingFileHandler |
-| **前端** | React（可选） |
-| **部署** | Docker / Docker Compose |
-
----
-
-## 📁 项目结构
+| **日志** | Python logging |
