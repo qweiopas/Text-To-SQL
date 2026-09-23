@@ -8,11 +8,10 @@
 git clone https://github.com/qweiopas/Text-To-SQL.git
 ```
 ``` bash
-cd Text-To-SQL
+cd Text-To-SQL/backend
 pip install -r requirements.txt
 # 需要 Python >= 3.11。
 pip install --upgrade "langgraph-cli[inmem]"
-cd backend
 langgraph dev
 ```
 
