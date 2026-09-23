@@ -4,6 +4,18 @@
 
 ---
 
+``` bash
+git clone https://github.com/qweiopas/Text-To-SQL.git
+```
+``` bash
+cd Text-To-SQL
+pip install -r requirements.txt
+# 需要 Python >= 3.11。
+pip install --upgrade "langgraph-cli[inmem]"
+cd backend
+langgraph dev
+```
+
 ## ✨ 功能特性
 
 - 🗣️ **自然语言交互** — 用日常语言描述需求，Agent 自动生成并执行 SQL
