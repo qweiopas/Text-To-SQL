@@ -1,6 +1,6 @@
 # Text-to-SQL Agent
 
-基于 **LangChain + LangGraph + DeepSeek** 的智能数据库查询助手。通过自然语言对话即可完成对 MySQL 数据库的增删改查、复杂聚合查询，并内置多层安全防护与可视化前端。
+基于 **LangChain + LangGraph + DeepSeek** 的智能数据库查询助手。通过自然语言对话即可完成对 MySQL 数据库的增删改查、复杂聚合查询。
 
 ---
 
